@@ -16,10 +16,10 @@ class Users(Api_standard_service):
 		:return: return a array of recipe
 
 		"""
-		
+
 
 		# run sql var
-        sql = "SELECT * FROM Users WHERE type = 'common'"
+		sql = "SELECT * FROM Users WHERE user_type = 'common'"
 		try:
 			self.cursor.execute(sql)
 			results = self.cursor.fetchall()
@@ -41,9 +41,14 @@ class Users(Api_standard_service):
 		if self.db_ver('Users', 'id', user_id) == 0:
 			return {'status': 404, 'Message': 'User id not found!'}		
 
-		data = {}
-        sql = ""
+		
+		if not recipe_id:
+			data = {'status': 300, 'Message': 'parameter required [id_recipe]'}
 		else:
+
+			data = {}
+			sql = "SELECT * FROM Users WHERE id = {}".format(user_id)
+			
 			try:
 				self.cursor.execute(sql)
 				recipes = self.cursor.fetchone()

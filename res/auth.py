@@ -8,7 +8,7 @@ class Auth:
 	
 	
 
-	def __init__ (self, db, email = '', password = '', name = '', user_type = 'common'):
+	def __init__(self, db, email = '', password = '', name = '', tele = '', user_type = 'common', covid = 0 ):
 		"""
 			Constructor of this object
 			:param name: user name
@@ -21,6 +21,8 @@ class Auth:
 		self.email = email
 		self.password = password
 		self.user_type = user_type
+		self.tele = tele
+		self.covid = covid
 
 		self.db = db
 		self.cursor = db.cursor()
@@ -40,7 +42,7 @@ class Auth:
 		
 		hashed_password = generate_password_hash(self.password, method='sha256')
 
-		sql = "INSERT INTO Users(name,email,password,created_at,api_key,user_type)VALUES('{}','{}','{}','{}','{}','{}')".format(self.name, self.email,hashed_password,datetime.date.today(),str(shortuuid.uuid()), self.user_type)
+		sql = "INSERT INTO Users(name,email,password,tele,covid,created_at,api_key,user_type)VALUES('{}','{}','{}','{}','{}','{}','{}','{}')".format(self.name, self.email,hashed_password,tele,covid,datetime.date.today(),str(shortuuid.uuid()), self.user_type)
 		
 		try:
 			self.cursor.execute(sql)
@@ -59,7 +61,7 @@ class Auth:
 			self.cursor.execute(sql)
 			r = self.cursor.fetchone()
 
-			return {'user_id': r[0], 'name': [1], 'email': r[2], 'user_type': r[6]}
+			return {'user_id': r[0], 'name': [1], 'email': r[2], 'user_type': r[8]}
 		
 		except:
 			self.db.rollback()
@@ -74,7 +76,7 @@ class Auth:
 			self.cursor.execute(sql)
 			r = self.cursor.fetchone()
 			
-			return {'password':r[3], 'name':r[1], 'public_id': r[5], 'user_type': r[6]}
+			return {'password':r[3], 'name':r[1], 'public_id': r[5], 'user_type': r[8]}
 
 		except:
 			self.db.rollback()

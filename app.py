@@ -6,9 +6,8 @@ import datetime
 
 from functools import wraps
 from res.auth import Auth
-from res.controllers.recipes import Recipes
-from res.controllers.ingredients import Ingredients
-from res.controllers.beers import Beers
+from res.controllers.Users import Users 
+from res.controllers.Covid import Covid 
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
@@ -25,7 +24,7 @@ config = {
 'host':'localhost',
 'user':'root',
 'password':'',
-'database':'quickrecipes',
+'database':'freeCovid',
 }
 
 
@@ -75,7 +74,7 @@ def auth():
 	:return: a key
 	"""
 	data = request.get_json()
-	obj = Auth(db, data['email'], data['password'], data['name'], 0 /* covid */ ) if 'user_type' not in data else Auth(db, data['email'], data['password'], data['name'], data['user_type'], 0 /* covid */)  # instance obj
+	obj = Auth(db, data['email'], data['password'], data['name'], data['tele']) if 'user_type' not in data else Auth(db, data['email'], data['password'], data['name'], data['tele'], data['user_type'])  # instance obj
 	response = obj.cUser()  # create record in DB
 
 	return jsonify(response)
@@ -186,14 +185,14 @@ def create_recipe(current_user, db):
 # * PUT REQUESTS *
 # ****************
 
-@app.route('/api/v1/userCovidStatus/<int:user_id>', methods=['PUT'])
+@app.route('/api/v1/userCovidUpdate/<int:user_id>/<int:status>', methods=['PUT'])
 @token_required
-def update_recipe(current_user, db, user_id):
+def update_recipe(current_user, db, user_id, status):
 	
 	data = request.get_json()
 	
 	obj = Covid(db, current_user['user_id'], data)
-	response = obj.update(user_id)	
+	response = obj.update(user_id, status)	
 	
 	return jsonify(response)
 
