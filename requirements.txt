@@ -1,0 +1,12 @@
+# some librarys project required
+# to install run: pip3 install -r requirements.txt 
+###### requirements without version specified ######
+numpy
+mysql.connector
+requests
+datetime
+pyjwt
+shortuuid
+
+###### requirements with verison specified ######
+flask == 1.1.2

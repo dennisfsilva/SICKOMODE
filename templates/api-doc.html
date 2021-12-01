@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://apidocjs.com/example_basic/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>QUICKRECIPES - API DOC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="./static/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="./static/style.css" rel="stylesheet" media="screen, print">
+  <link href="https://apidocjs.com/example_basic/img/favicon.ico" rel="icon" type="image/x-icon">
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div id="sidenav" class="span2">
+<nav id="scrollingNav">
+  <ul class="sidenav nav nav-list">
+          <li class="nav-header" data-group="User"><a href="#">QUICK RECIPES api</a></li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('intro')">Intro</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('auth')">Authentication</a>
+        </li>
+        <li class="nav-header" data-group="User"><a href="#">Recipes</a></li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('s_recipe')">Search Recipes</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('d_recipe')">Recipe Detailed Information</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('rand_recipe')">Random Recipe</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('insert_recipe')">Insert Recipe</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('upd_recipe')">Update Recipe</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('del_recipe')">Delete Recipe</a>
+        </li>
+        <li class="nav-header" data-group="User"><a href="#">Ingredients</a></li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('s_ingredient')">Search Ingredients</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('d_ingredient')">Ingredient Detailed Info</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('insert_ingredient')">Insert Ingredient</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('upd_ingredient')">Update Ingredient</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('del_ingredient')">Delete Ingredient</a>
+        </li>
+        <li class="nav-header" data-group="User"><a href="#">Beers</a></li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('s_beers')">Search Beers</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('d_beer')">Beer Detailed Info</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('r_beer')">Random Beer</a>
+        </li>
+        <li data-group="User" data-name="GetUser" data-version="0.0.0">
+          <a href="#" onclick="pagination('rc_beer')">Recomend Beer</a>
+        </li>
+  </ul>
+</nav>
+</div>
+    <div id="content">
+      <div id="project">
+  <div class="pull-left">
+    <h1>QUICK RECIPES API</h1>
+    <h2>Documentation</h2>
+  </div>
+  <div class="clearfix"></div>
+</div>
+      <div id="header"></div>
+      <div id="sections">
+
+
+<!-- intro -->
+  <section id="intro">
+    <h1>Intro</h1>
+      <div id="api-User-GetUser">
+        <p>Search using dozens of parameters: recipes, ingredients and calorie information, through information included on Stachio.co.</p>
+		<p>As well as suggestions of side drinks to go along your favorite meals.</p>
+		<p>Create your own recipes, and upload them to our database. Mark them as visible to share them with other creators.</p>
+		<p>Get access to our database of ingredients and add some of your own.</p>
+		<p><b>(RESTful)</b></p>
+      </div>
+  </section>
+
+
+<!-- Auth  -->
+  <section style="display:none;" id="auth">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>Authentication</h1>
+      <p>Create User</p>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/auth/</span></code></pre>
+
+      <h2>Parameter</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 20%">Field</th>
+            <th style="width: 20%">Type</th>
+            <th style="width: 20%">Description</th>
+            <th style="width: 20%">required</th>
+            <th style="width: 20%">default value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>name</td>
+            <td>string</td>
+            <td>user personal name</td>
+            <td>true</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>email</td>
+            <td>string</td>
+            <td>user personal email</td>
+            <td>true</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>password</td>
+            <td>string</td>
+            <td>password to use in login</td>
+            <td>true</td>
+            <td>null</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+    </span><span class="pun">{</span><span class="pln">
+    </span><span class="str">200</span><span class="pun">
+    <span class="pun">}</span></code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Error-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (AUTH) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- search recipe -->
+  <section style="display:none;" id="s_recipe">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Search Recipe</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/recipes/</span></code></pre>
+
+      <h2>Parameter</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 20%">Field</th>
+            <th style="width: 20%">Type</th>
+            <th style="width: 100%">Description</th>
+            <th style="width: 20%">required</th>
+            <th style="width: 20%">default value</th>
+          </tr>
+        </thead>
+        <tbody>
+		  <tr>
+            <td>nutrients</td>
+            <td>string</td>
+            <td>
+			  <p>minFiber (number 0 )</p>
+			  <p>maxFiber (number 100)</p>
+			  <p>minCals (number 0)</p>
+			  <p>maxCals (number 100)</p>
+			  <p>minProtein (number 0)</p>
+			  <p>maxProtein (number 100)</p>
+			  <p>minFat (number 0)</p>
+			  <p>maxFat (number 100)</p>
+			  <p>minCarbs (number 0)</p>
+			  <p>maxCarbs (number 100)</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>results</td>
+            <td>int</td>
+            <td><p>Number of expected results</p></td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>sort</td>
+            <td>string</td>
+            <td><p>sort by param (ex: calories, carbs, fat)</p></td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>sortDirection</td>
+            <td>string</td>
+            <td><p>if desc or asc (default = asc)</p></td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code>
+          {
+            "results": [
+              {
+                "id": 7,
+                "calories": 0,
+                "carbs": 0,
+                "fat": 283,
+                "protein": 0,
+                "fiber": 0,
+                "image": "-",
+                "imageType": "jpg,jpeg",
+                "title": "teste de teste"
+              }
+            ],
+            "nr_results": 4
+          }
+        </code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Error-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (search recipe) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- detailed recipe info  -->
+   <section style="display:none;" id="d_recipe">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Recipe Detailed Information</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/recipe_details/19</span></code></pre>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code>
+          {
+            "recipe": [
+              {
+                "id": "19",
+                "title": "Ramen",
+                "description": "muito bom, 99.9% saudavel",
+                "instructions": "caldo de carne, molho de soja, pe\u00e7o desculpa ",
+                "image_link": "-",
+                "public": 1,
+                "calories": 19,
+                "fat": 0,
+                "protein": 25,
+                "fiber": 0
+              },
+              {
+                "ingredients": [
+                  {
+                    "id_ingredient": 1,
+                    "name": "apple",
+                    "ingredient_calories": 100,
+                    "type": "fruit",
+                    "amount": 1
+                  },
+                  {
+                    "id_ingredient": 2,
+                    "name": "banana",
+                    "ingredient_calories": 56,
+                    "type": "fruit",
+                    "amount": 4
+                  }
+                ]
+              }
+            ]
+          }
+        </code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Error-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (Detailed recipe) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- reandom_recipe  -->
+<section style="display:none;" id="rand_recipe">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Random Recipe</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/rand_recipes/</span></code></pre>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="#">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+    </span>
+    {
+      "id": 7,
+      "calories": 0,
+      "carbs": 0,
+      "fat": 283,
+      "protein": 0,
+      "fiber": 0,
+      "image": "-",
+      "imageType": "jpg,jpeg",
+      "title": "teste de teste"
+    }
+</code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href=""</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+  </section>
+
+<!-- END OF SECITON (random recipe) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- insert_recipe  -->
+  <section style="display:none;" id="insert_recipe">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Insert Recipe</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/create_recipe/</span></code></pre>
+
+      <h2>Parameter</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 20%">Field</th>
+            <th style="width: 20%">Type</th>
+            <th style="width: 90%">Description</th>
+            <th style="width: 20%">required</th>
+            <th style="width: 20%">default value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>title</td>
+            <td>string</td>
+            <td><p>Title of recipe to be inserted</p></td>
+            <td>true</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>array</td>
+            <td><p>Ingredients id (ex: [2,42,14])</p></td>
+            <td>true</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>amount</td>
+            <td>array</td>
+            <td><p>ingredients amount (ex: [13,200,98]) each index is associated with id array index</p></td>
+            <td>true</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>instructions</td>
+            <td>string</td>
+            <td>
+				<p>Step by step instructions of the recipe</p>
+			</td>
+            <td>true</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>calories</td>
+            <td>int</td>
+            <td>
+				<p>Calorie quantity</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>fiber</td>
+            <td>int</td>
+            <td>
+				<p>Fiber quantity in grams</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>protein</td>
+            <td>int</td>
+            <td>
+				<p>Protein quantity in grams</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>fat</td>
+            <td>int</td>
+            <td>
+				<p>Fat quantity in grams</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>carbs</td>
+            <td>int</td>
+            <td>
+				<p>Carbs quantity in grams</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>url_image</td>
+            <td>string</td>
+            <td>
+				<p>Image ilustrating finished recipe</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>visible</td>
+            <td>string</td>
+            <td>
+				<p>Variable choosing if recipe is publicly available to other user</p>
+			</td>
+            <td>false</td>
+            <td>0</td>
+          </tr>
+          <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>
+    				<p>a litle description about the recipe</p>
+    			</td>
+                <td>false</td>
+                <td>null</td>
+              </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="#">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+    </span>
+	{
+		"status": 200, 'Message': 'Recipe created [recipe_id = 19]'
+	}
+</code></pre>
+        </div>
+      </div>
+
+		<ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="#">Error-Response:</a>
+          </li>
+		</ul>
+
+		<div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">201</span><span class="pln"> ERROR
+    </span>
+	{
+		"success": false,
+		"error": {
+			"code": 123,
+			"message": "Error occurred on insertion"
+		}
+	}
+</code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Error-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (insert recipe) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- update recipe -->
+  <section style="display:none;" id="upd_recipe">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Update Recipe</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="put" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/update_recipe/19</span></code></pre>
+
+      <h2>Parameter</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 20%">Field</th>
+            <th style="width: 20%">Type</th>
+            <th style="width: 90%">Description</th>
+            <th style="width: 20%">required</th>
+            <th style="width: 20%">default value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>title</td>
+            <td>string</td>
+            <td><p>Title of recipe to be inserted</p></td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>id_ingredients</td>
+            <td>array</td>
+            <td><p>id of ingredients to be updated</p></td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>amount</td>
+            <td>array</td>
+            <td><p>quantity to be updated on ingredients</p></td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>instructions</td>
+            <td>string</td>
+            <td>
+				<p>Step by step instructions of the recipe</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>calories</td>
+            <td>int</td>
+            <td>
+				<p>Calorie quantity</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>fiber</td>
+            <td>int</td>
+            <td>
+				<p>Fiber quantity in grams</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>protein</td>
+            <td>int</td>
+            <td>
+				<p>Protein quantity in grams</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>fat</td>
+            <td>int</td>
+            <td>
+				<p>Fat quantity in grams</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>carbs</td>
+            <td>int</td>
+            <td>
+				<p>Carbs quantity in grams</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>image_link</td>
+            <td>string</td>
+            <td>
+				<p>Image ilustrating finished recipe</p>
+			</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+		  <tr>
+            <td>visible</td>
+            <td>string</td>
+            <td>
+				<p>Variable choosing if recipe is publicly available to other user</p>
+			</td>
+            <td>false</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="#">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+    </span>
+	{
+		"status": 200, "Message": "Recipe Updated ['recipe_id':19, 'updated_at': '2020-12-29' ]"
+	}
+</code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Error-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON ( upd_recipe) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- delete recipe  -->
+  <section style="display:none;" id="del_recipe">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Delete Recipe</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="delete" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/delete_recipe/19</span></code></pre>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="#">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+    </span>
+	{
+		"success": 204, "Message": "Successful Deleted"
+	}
+</code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Error-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (del_recipe) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- search ingredients -->
+  <section style="display:none;" id="s_ingredient">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Search Ingredients</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/ingredients/</span></code></pre>
+
+      <h2>Parameter</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 20%">Field</th>
+            <th style="width: 20%">Type</th>
+            <th style="width: 100%">Description</th>
+            <th style="width: 20%">required</th>
+            <th style="width: 20%">default value</th>
+          </tr>
+        </thead>
+        <tbody>
+		  <tr>
+            <td>name</td>
+            <td>string</td>
+            <td><p>Partial name of wanted ingredient</p></td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>results</td>
+            <td>int</td>
+            <td><p>Number of expected results</p></td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code>
+          {
+            "content": [
+              {
+                "id": 1,
+                "name": "apple",
+                "type": "fruit"
+              },
+              {
+                "id": 2,
+                "name": "banana",
+                "type": "fruit"
+              },
+              {
+                "id": 3,
+                "name": "Tomate",
+                "type": "fruit"
+              },
+              {
+                "id": 4,
+                "name": "canela",
+                "type": "p\u00f3 m\u00e1gico"
+              }
+            ],
+            "nr_results": 4
+          }
+        </code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Error-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+</section>
+<!-- END OF SECITON (search ingredients) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- detailed ingredient info  -->
+  <section style="display:none;" id="d_ingredient">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Ingredient Detailed Info</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/ingredient_details/3<br/>http://quickrecipe.azurewebsites.net/api/v1/ingredient_details/3,12,4 (more than one ingredient)</span></code></pre>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code>
+          {
+            "content": [
+              {
+                "ingredient": {
+                  "id": 3,
+                  "name": "Tomate",
+                  "calories": 12,
+                  "type": "fruit",
+                  "created_at": "Sat, 02 Jan 2021 00:00:00 GMT"
+                },
+                "recipes": [
+                  {
+                    "recipe_id": 21,
+                    "title": "21 savage, runnin",
+                    "description": "-",
+                    "image_link": "-"
+                  },
+                  {
+                    "recipe_id": 25,
+                    "title": "teset de asdasd",
+                    "description": "None",
+                    "image_link": "123.jpg"
+                  }
+                ]
+              }
+            ],
+            "total_results": 1
+          }
+        </code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Error-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (recipe info) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- insert ingredient  -->
+  <section style="display:none;" id="insert_ingredient">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Insert Ingredient</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="post" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/create_ingredient/</span></code></pre>
+
+      <h2>Parameter</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 20%">Field</th>
+            <th style="width: 20%">Type</th>
+            <th style="width: 20%">Description</th>
+            <th style="width: 20%">required</th>
+            <th style="width: 20%">default value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>name</td>
+            <td>string</td>
+            <td>ingredient name</td>
+            <td>true</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td>string</td>
+            <td>type of ingredient if fruit, vegetable for example</td>
+            <td>true</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>calories</td>
+            <td>number</td>
+            <td>ingredient calories</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style="">
+          <code>
+            {
+          		"success": 200, "Message": "Ingredient Created"
+          	}
+          </code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Error-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (insert ingredient) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- update ingredient -->
+  <section style="display:none;" id="upd_ingredient">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Update Ingredient</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="put" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/update_ingredient/2</span></code></pre>
+
+      <h2>Parameter</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 20%">Field</th>
+            <th style="width: 20%">Type</th>
+            <th style="width: 20%">Description</th>
+            <th style="width: 20%">required</th>
+            <th style="width: 20%">default value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>nome_ingredient</td>
+            <td>string</td>
+            <td>ingredient name</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td>string</td>
+            <td>ingrediet type if fruit, vegetable for example</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>calories</td>
+            <td>number</td>
+            <td>ingredient calories</td>
+            <td>false</td>
+            <td>null</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style="">
+          <code>
+            {
+          		"success": 200, "Message": "successful updated!"
+          	}
+          </code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Error-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (upd_ingredient) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- delete ingredient  -->
+  <section style="display:none;" id="del_ingredient">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Delete Ingredient</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="delete" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/delete_ingredient/2</span></code></pre>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style="">
+          <code>
+            {
+          		"success": 204, "Message": "Ingredient deleted!"
+          	}
+          </code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Error-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (delete ingredient) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- search beer  -->
+  <section style="display:none;" id="s_beers">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Search Beers</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/beers/</span></code></pre>
+
+    <h2>Parameter</h2>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 20%">Field</th>
+          <th style="width: 20%">Type</th>
+          <th style="width: 20%">Description</th>
+          <th style="width: 20%">required</th>
+          <th style="width: 20%">default value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>abv_gt</td>
+          <td>number</td>
+          <td>Returns all beers with ABV greater than the supplied number</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>abv_lt</td>
+          <td>number</td>
+          <td>Returns all beers with ABV less than the supplied number</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>ibu_gt</td>
+          <td>number</td>
+          <td>Returns all beers with IBU greater than the supplied number</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>ibu_lt</td>
+          <td>number</td>
+          <td>Returns all beers with IBU less than the supplied number</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>ebc_gt</td>
+          <td>number</td>
+          <td>Returns all beers with EBC greater than the supplied number</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>ebc_lt</td>
+          <td>number</td>
+          <td>Returns all beers with EBC less than the supplied number</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>beer_name</td>
+          <td>string</td>
+          <td>Returns all beers matching the supplied name (this will match partial strings as well so e.g punk will return Punk IPA), if you need to add spaces just add an underscore (_).</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>yeast</td>
+          <td>string</td>
+          <td>Returns all beers matching the supplied yeast name, this performs a fuzzy match, if you need to add spaces just add an underscore (_).</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>brewed_before</td>
+          <td>date</td>
+          <td>Returns all beers brewed before this date, the date format is mm-yyyy e.g 10-2011</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>brewed_after</td>
+          <td>date</td>
+          <td>Returns all beers brewed after this date, the date format is mm-yyyy e.g 10-2011</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>hops</td>
+          <td>string</td>
+          <td>Returns all beers matching the supplied hops name, this performs a fuzzy match, if you need to add spaces just add an underscore (_).</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>malt</td>
+          <td>string</td>
+          <td>Returns all beers matching the supplied malt name, this performs a fuzzy match, if you need to add spaces just add an underscore (_).</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>ids</td>
+          <td>string (id|id|...)</td>
+          <td>Returns all beers matching the supplied ID's. You can pass in multiple ID's by separating them with a | symbol.</td>
+          <td>false</td>
+          <td>null</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style="">
+          <code>
+            {
+              "results": [
+                {
+                  "id": 1,
+                  "name": "Buzz",
+                  "first_brewed": "09/2007",
+                  "description": "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.",
+                  "image_url": "https://images.punkapi.com/v2/keg.png",
+                  "abv": 4.5,
+                  "ph": 4.4,
+                  "attenuation_level": 75,
+                  "volume": {
+                    "value": 20,
+                    "unit": "litres"
+                  },
+                  "food_pairing": [
+                    "Spicy chicken tikka masala",
+                    "Grilled chicken quesadilla",
+                    "Caramel toffee cake"
+                  ],
+                  "brewers_tips": "The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus."
+                }
+              ],
+              "nr_results": 25
+            }
+          </code></pre>
+        </div>
+      </div>
+
+      <!--<h2>Error 4xx</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Field</th>
+
+            <th style="width: 70%">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UserNotFound</td>
+            <td>
+            <p>The <code>id</code> of the User was not found.</p>
+
+
+                        </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Error-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="error-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style=""><code><span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNotFound"</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+        </div>
+      </div>-->
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (search beer) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- beer details  -->
+  <section style="display:none;" id="d_beer">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Beer Detailed Info</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/beers/12</span></code></pre>
+
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style="">
+          <code>
+            {
+              "results": [
+                {
+                  "id": 12,
+                  "name": "Arcade Nation",
+                  "first_brewed": "12/2015",
+                  "description": "Running the knife-edge between an India Pale Ale and a Stout, this particular style is one we truly love. Black IPAs are a great showcase for the skill of our brew team, balancing so many complex and twisting flavours in the same moment. The citrus, mango and pine from the hops \u2013 three of our all-time favourites \u2013 play off against the roasty dryness from the malt bill at each and every turn.",
+                  "image_url": "https://images.punkapi.com/v2/12.png",
+                  "abv": 5.3,
+                  "ph": 4.2,
+                  "attenuation_level": 77,
+                  "method": {
+                    "mash_temp": [
+                      {
+                        "temp": {
+                          "value": 65,
+                          "unit": "celsius"
+                        },
+                        "duration": null
+                      }
+                    ],
+                    "fermentation": {
+                      "temp": {
+                        "value": 19,
+                        "unit": "celsius"
+                      }
+                    },
+                    "twist": null
+                  },
+                  "ingredients": {
+                    "malt": [
+                      {
+                        "name": "Pale Ale",
+                        "amount": {
+                          "value": 3.13,
+                          "unit": "kilograms"
+                        }
+                      },
+                      {
+                        "name": "Caramalt",
+                        "amount": {
+                          "value": 0.25,
+                          "unit": "kilograms"
+                        }
+                      },
+                      {
+                        "name": "Crystal 150",
+                        "amount": {
+                          "value": 0.18,
+                          "unit": "kilograms"
+                        }
+                      },
+                      {
+                        "name": "Carafa Special Malt Type 1",
+                        "amount": {
+                          "value": 0.25,
+                          "unit": "kilograms"
+                        }
+                      }
+                    ],
+                    "hops": [
+                      {
+                        "name": "Simcoe",
+                        "amount": {
+                          "value": 12.5,
+                          "unit": "grams"
+                        },
+                        "add": "start",
+                        "attribute": "bitter"
+                      },
+                      {
+                        "name": "Simcoe",
+                        "amount": {
+                          "value": 19,
+                          "unit": "grams"
+                        },
+                        "add": "middle",
+                        "attribute": "flavour"
+                      },
+                      {
+                        "name": "Simcoe",
+                        "amount": {
+                          "value": 12.5,
+                          "unit": "grams"
+                        },
+                        "add": "end",
+                        "attribute": "flavour"
+                      },
+                      {
+                        "name": "Amarillo",
+                        "amount": {
+                          "value": 12.5,
+                          "unit": "grams"
+                        },
+                        "add": "end",
+                        "attribute": "flavour"
+                      },
+                      {
+                        "name": "Citra",
+                        "amount": {
+                          "value": 12.5,
+                          "unit": "grams"
+                        },
+                        "add": "end",
+                        "attribute": "flavour"
+                      },
+                      {
+                        "name": "Simcoe",
+                        "amount": {
+                          "value": 62.5,
+                          "unit": "grams"
+                        },
+                        "add": "dry hop",
+                        "attribute": "aroma"
+                      },
+                      {
+                        "name": "Amarillo",
+                        "amount": {
+                          "value": 62.5,
+                          "unit": "grams"
+                        },
+                        "add": "dry hop",
+                        "attribute": "aroma"
+                      },
+                      {
+                        "name": "Citra",
+                        "amount": {
+                          "value": 62.5,
+                          "unit": "grams"
+                        },
+                        "add": "dry hop",
+                        "attribute": "aroma"
+                      }
+                    ],
+                    "yeast": "Wyeast 1056 - American Ale\u2122"
+                  },
+                  "volume": {
+                    "value": 20,
+                    "unit": "litres"
+                  },
+                  "food_pairing": [
+                    "King prawn kebabs",
+                    "Halibut with a mango and tomato salad",
+                    "Mint chocloate ice cream"
+                  ],
+                  "brewers_tips": "Be as accurate as possible when weighing out your malts to ensure you strike the right balance."
+                }
+              ]
+            }
+          </code></pre>
+        </div>
+      </div>
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (beer details) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- random beer  -->
+  <section style="display:none;" id="r_beer">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Random Beer</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/beers/random</span></code></pre>
+
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style="">
+          <code>
+            {
+              "results": [
+                {
+                  "id": 266,
+                  "name": "Small Batch: Lemon Meringue Pie",
+                  "first_brewed": "2017",
+                  "description": "Brewed to a concept voted on at Craft Beer Rising, this one-off beer is an experimental brew which emulates the flavour of lemon meringue pie.",
+                  "image_url": null,
+                  "abv": 6.5,
+                  "ph": 4,
+                  "attenuation_level": 77,
+                  "volume": {
+                    "value": 20,
+                    "unit": "litres"
+                  },
+                  "food_pairing": [
+                    "Lemon Tart"
+                  ],
+                  "brewers_tips": "Dextrin Malt adds sugars to your wort that the yeast are unable to ferment. If you want a sweetness remaining in your beer, add a little of this but not too much!!!"
+                }
+              ]
+            }
+          </code></pre>
+        </div>
+      </div>
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (random beer) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+<!-- ****************************************************************************************************************************************************************************** -->
+<!-- recomended beers -->
+  <section style="display:none;" id="rc_beer">
+      <div id="api-User-GetUser">
+  <article id="api-User-GetUser-0.0.0" data-group="User" data-name="GetUser" data-version="0.0.0">
+    <div class="pull-left">
+      <h1>API - Recomend Beer</h1>
+    </div>
+    <div class="clearfix"></div>
+
+    <pre class="prettyprint language-html prettyprinted" data-type="get" style=""><code><span class="pln">http://quickrecipe.azurewebsites.net/api/v1/beers/chicken</span></code></pre>
+
+
+      <ul class="nav nav-tabs nav-tabs-examples">
+          <li class="active">
+            <a href="link">Success-Response:</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="success-examples-User-GetUser-0_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json" style="">
+          <code>
+            {
+              "food": "chicken",
+              "beers": {
+                "results": 25,
+                "beer_info": [
+                  {
+                    "id": 1,
+                    "name": "Buzz",
+                    "description": "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.",
+                    "abv": 4.5,
+                    "first_brewed": "09/2007",
+                    "fermentation": "19 celsius"
+                  },
+                  {
+                    "id": 3,
+                    "name": "Berliner Weisse With Yuzu - B-Sides",
+                    "description": "Japanese citrus fruit intensifies the sour nature of this German classic.",
+                    "abv": 4.2,
+                    "first_brewed": "11/2015",
+                    "fermentation": "21 celsius"
+                  },
+                  {
+                    "id": 11,
+                    "name": "Misspent Youth",
+                    "description": "The brainchild of our small batch brewer, George Woods. A dangerously drinkable milk sugar- infused Scotch Ale.",
+                    "abv": 7.3,
+                    "first_brewed": "04/2013",
+                    "fermentation": "19 celsius"
+                  },
+                  {
+                    "id": 18,
+                    "name": "Russian Doll \u2013 India Pale Ale",
+                    "description": "The levels of hops vary throughout the range. We love hops, so all four beers are big, bitter badasses, but by tweaking the amount of each hop used later in the boil and during dry- hopping, we can balance the malty backbone with some unexpected flavours. Simcoe is used in the whirlpool for all four beers, and yet still lends different characters to each",
+                    "abv": 6,
+                    "first_brewed": "08/2014",
+                    "fermentation": "19 celsius"
+                  }
+                ]
+              }
+            }
+          </code></pre>
+        </div>
+      </div>
+
+  </article>
+
+      </div>
+  </section>
+<!-- END OF SECITON (recomended beers) -->
+<!-- ****************************************************************************************************************************************************************************** -->
+
+
+
+</div>
+      <div id="footer"></div>
+      <div id="generator">
+      <div class="content">
+        Generated with <a href="http://apidocjs.com/">apiDoc</a> 0.9.0 - 2014-11-28T14:54:55.224Z
+      </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+function pagination(id){
+  var ids = ['intro','auth','s_recipe','d_recipe','rand_recipe','insert_recipe','upd_recipe','del_recipe','s_ingredient','d_ingredient','insert_ingredient','upd_ingredient','del_ingredient','s_beers','d_beer','r_beer','rc_beer'];
+
+    for(var i = 0; i < ids.length ; i++){
+      if( !id.localeCompare(ids[i])) document.getElementById(ids[i]).style.display = "";
+      else document.getElementById(ids[i]).style.display = "none";
+    }
+
+}
+</script>
+
+</body></html>
