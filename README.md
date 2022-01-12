@@ -9,7 +9,7 @@ ISIwebservice covid bad app
 - Connect Database to project:
 	- [ ] in the file app.py update from line 24 to 27
 	
-- SOAP or REST or BOTH:
+- SOAP, REST or BOTH:
 	- [ ] implement SOAP (?)
 - IMPORT data files:
 	- [ ] import json and xml format files with users data
